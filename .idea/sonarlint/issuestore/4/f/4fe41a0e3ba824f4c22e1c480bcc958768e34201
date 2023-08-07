@@ -1,0 +1,22 @@
+
+j
+java:S1104"TMake BASE_URL a static final constant or non-public and provide accessors if needed.(õ‘¬
+o
+java:S1104"ZMake CREATE_BOOKING a static final constant or non-public and provide accessors if needed.(…×­>
+p
+java:S1104"ZMake UPDATE_BOOKING a static final constant or non-public and provide accessors if needed.(ŽÖÆÀ
+D
+java:S1444".Make this "public static BASE_URL" field final(õ‘¬
+I
+java:S1444"4Make this "public static CREATE_BOOKING" field final(…×­>
+J
+java:S1444"4Make this "public static UPDATE_BOOKING" field final(ŽÖÆÀ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·¿ž•
+i
+java:S3008"SRename this field "BASE_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ‘¬
+n
+java:S3008"YRename this field "CREATE_BOOKING" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…×­>
+o
+java:S3008"YRename this field "UPDATE_BOOKING" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽÖÆÀ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(·¿ž•

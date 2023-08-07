@@ -7,6 +7,8 @@ import javax.annotation.processing.Generated;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+// https://www.jsonschema2pojo.org/  --> used for creating POJO classes
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "firstname",
