@@ -4,6 +4,7 @@ import com.restfulbooker.endpoints.API_Constants;
 import com.restfulbooker.modules.Payloadmanager;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
@@ -32,8 +33,13 @@ public class baseTests {
         requestSpecification = RestAssured.given()
                 .baseUri(API_Constants.BASE_URL)
                 .basePath(API_Constants.AUTH_URL);
-
-        return null;
+        String payload = "{\n" +
+                "    \"username\" : \"admin\",\n" +
+                "    \"password\" : \"password123\"\n" +
+                "}";
+        response = requestSpecification.contentType(ContentType.JSON)
+                .body(payload).when().post();
+        jsonPath = new JsonPath(response.asString());
+        return jsonPath.getString("token");
     }
-
 }

@@ -3,16 +3,15 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="D:/My Projects/APIAutomationRestAssured">
         <classes>
-            <class name="com.restfulbooker.tests.crud.ping">
+            <class name="com.restfulbooker.tests.integrationtests.integrationTest1">
                 <methods>
-                    <include name="pingRequest"/>
+                    <include name="testCreateBooking"/>
+                    <include name="testUpdateBooking"/>
+                    <include name="testGetBooking"/>
                 </methods>
-                <groups>
-                    <run>
-                        <include name="sanity"/>
-                    </run>
-                </groups>
             </class>
+            <class name="com.restfulbooker.tests.crud.createBooking"></class>
+            <class name="com.restfulbooker.tests.crud.ping"></class>
         </classes>
     </test>
 </suite>
