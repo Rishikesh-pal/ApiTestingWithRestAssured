@@ -21,9 +21,8 @@ public class createBooking extends baseTests {
     @Owner("Rishi")
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify that the Booking can be Created")
-    public void testCreateBooking(ITestContext iTestContext) throws JsonProcessingException {
+    public void testCreateBooking() throws JsonProcessingException {
         requestSpecification.basePath(API_Constants.CREATE_BOOKING);
-
         Response response = RestAssured.given().spec(requestSpecification)
                 .when().body(payloadmanager.createPayload()).post();
         ValidatableResponse validatableResponse = response.then().log().all();
@@ -32,6 +31,5 @@ public class createBooking extends baseTests {
         validatableResponse.statusCode(200);
         String bookingId = jsonPath.getString("bookingid");
         assertThat(bookingId).isNotNull().isNotEmpty();
-        iTestContext.setAttribute("bookingid", jsonPath.getString("bookingid"));
     }
 }
