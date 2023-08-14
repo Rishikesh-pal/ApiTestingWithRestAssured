@@ -22,7 +22,7 @@ public class baseTests {
     @BeforeMethod
     public void setupConfig(){
         payloadmanager = new Payloadmanager();
-        requestSpecification =(RequestSpecification) new RequestSpecBuilder()
+        requestSpecification =(RequestSpecification) new RequestSpecBuilder() // class same as RequestSpecification - typecast (RequestSpecification)
                 .setBaseUri(API_Constants.BASE_URL)
                 .addHeader("Content-Type", "application/json")
                 .build()
